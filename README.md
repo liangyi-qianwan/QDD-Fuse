@@ -14,6 +14,8 @@ It contains the minimal source code, configuration files, final checkpoints, pac
 - `checkpoints/text_encoders/`: tokenizer/config files for the fine-tuned text encoders. The large encoder weight files are intentionally omitted because the checkpoint state dict already contains the required encoder weights.
 - `results/`: saved metrics, logs, hyperparameter summary, and original retest JSON files.
 
+Note: the GitHub source tree does not contain the large `best.pt` files. They appear in `checkpoints/{dataset}/best.pt` only after extracting the full release archive.
+
 The dataset files are not included. On `emo`, the verified data root is:
 
 ```bash
