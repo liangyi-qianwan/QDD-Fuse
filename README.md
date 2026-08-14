@@ -73,11 +73,25 @@ See `results/best_hparams_summary.json` and `results/original_retest/` for the s
 
 ## GitHub Release Archive
 
-The `best.pt` files are larger than GitHub's normal 100 MB file limit. In the GitHub repository source tree, they are not committed directly. Download the `QDD-Fuse.tar.part-*` files from the release assets, then reconstruct the full package:
+The `best.pt` files are larger than GitHub's normal 100 MB file limit. In the GitHub repository source tree, they are not committed directly.
+
+Download these release assets:
+
+- `QDD-Fuse_repro_20260814.tar.part-aa`
+- `QDD-Fuse_repro_20260814.tar.part-ac`
+- `QDD-Fuse_repro_20260814.tar.parts.sha256`
+- `QDD-Fuse_repro_20260814.tar.part-ab.chunk-*`
+- `QDD-Fuse_repro_20260814.tar.part-ab.chunks.sha256`
+
+Reconstruct the full package:
 
 ```bash
-cat QDD-Fuse.tar.part-* > QDD-Fuse.tar
-sha256sum -c QDD-Fuse.tar.parts.sha256
+cat QDD-Fuse_repro_20260814.tar.part-ab.chunk-* > QDD-Fuse_repro_20260814.tar.part-ab
+sha256sum -c QDD-Fuse_repro_20260814.tar.part-ab.chunks.sha256
+sha256sum -c QDD-Fuse_repro_20260814.tar.parts.sha256
+cat QDD-Fuse_repro_20260814.tar.part-aa \
+  QDD-Fuse_repro_20260814.tar.part-ab \
+  QDD-Fuse_repro_20260814.tar.part-ac > QDD-Fuse.tar
 tar -xf QDD-Fuse.tar
 ```
 

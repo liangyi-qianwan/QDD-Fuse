@@ -317,12 +317,23 @@ def main() -> int:
     print(f"Authenticated as: {owner}")
 
     repo = ensure_repo(token, owner, repo_name, private)
-    upload_source_tree(token, owner, repo_name, package_dir)
+    if os.environ.get("SKIP_SOURCE", "false").lower() in {"1", "true", "yes"}:
+        print("Skipping source-tree upload.")
+    else:
+        upload_source_tree(token, owner, repo_name, package_dir)
+    if os.environ.get("SKIP_ASSETS", "false").lower() in {"1", "true", "yes"}:
+        print("Skipping release-asset upload.")
+        print(f"Repository URL: {repo['html_url']}")
+        return 0
 
     assets = sorted(asset_dir.glob("QDD-Fuse_repro_20260814.tar.part-*"))
     checksum = asset_dir / "QDD-Fuse_repro_20260814.tar.parts.sha256"
     if checksum.exists():
         assets.append(checksum)
+    asset_names = os.environ.get("ASSET_NAMES")
+    if asset_names:
+        wanted = {name.strip() for name in asset_names.split(",") if name.strip()}
+        assets = [path for path in assets if path.name in wanted]
     if not assets:
         raise SystemExit("No release assets found.")
 
