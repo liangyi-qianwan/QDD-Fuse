@@ -1,0 +1,39 @@
+{
+  "best_epoch": 2,
+  "selection_metric": "mae",
+  "best_valid_score": 0.3011362821934673,
+  "best_valid_mae": 0.3011362821934673,
+  "best_valid_loss": 4.0718467018821025,
+  "checkpoint_saved": true,
+  "test": {
+    "mae": 0.2913959459194506,
+    "corr": 0.7222312396664261,
+    "acc2": 80.27079303675049,
+    "f1": 80.30927839618788,
+    "acc2_nz": 83.61702127659575,
+    "f1_nz": 83.54812689564078,
+    "acc3": 73.88781431334623,
+    "acc5": 57.543520309477756
+  },
+  "test_losses": {
+    "task": 0.16160105607088873,
+    "common": 0.8968848270528457,
+    "pair": 0.908246447058285,
+    "orth": 0.00789726457065519,
+    "hsic": 0.1263626393149881,
+    "info": 0.19068366376792684,
+    "noise": 0.03572113527094617,
+    "reconstruction": 0.09977901683134191,
+    "kl": 0.3903730388949899,
+    "dynamic_weight_common": 1.0216155052185059,
+    "dynamic_weight_pair": 1.0216166973114014,
+    "dynamic_weight_orth": 1.021547555923462,
+    "dynamic_weight_hsic": 1.0215487480163574,
+    "dynamic_weight_info": 1.0216020345687866,
+    "dynamic_weight_noise": 1.0215498208999634,
+    "dynamic_weight_reconstruction": 1.021564245223999,
+    "dynamic_weight_kl": 1.021550178527832,
+    "total": 5.850828984204461
+  },
+  "extra_best": {}
+}

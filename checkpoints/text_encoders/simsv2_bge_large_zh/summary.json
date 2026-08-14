@@ -1,0 +1,9 @@
+{
+  "dataset": "simsv2",
+  "model_name": "/hy-tmp/CVPR2026/models/ms_cache/models/AI-ModelScope--bge-large-zh/snapshots/master",
+  "best_epoch": 2,
+  "best_valid_mae": 0.3285597562789917,
+  "test_mae": 0.33248117566108704,
+  "test_corr": 0.6807083123660694,
+  "output_dir": "/hy-tmp/CVPR2026/outputs_text/simsv2_bge_large_zh"
+}

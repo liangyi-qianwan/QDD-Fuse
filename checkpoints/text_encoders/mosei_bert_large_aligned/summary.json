@@ -1,0 +1,9 @@
+{
+  "dataset": "mosei",
+  "model_name": "/hy-tmp/CVPR2026/models/ms_cache/models/AI-ModelScope--bert-large-uncased/snapshots/master",
+  "best_epoch": 8,
+  "best_valid_mae": 0.525437593460083,
+  "test_mae": 0.5364010334014893,
+  "test_corr": 0.7784740776098725,
+  "output_dir": "outputs_text/mosei_bert_large_aligned"
+}

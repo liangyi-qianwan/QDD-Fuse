@@ -1,0 +1,3 @@
+ce8599450e59bc028f06f5f09e2f19ff6e066d3fa08f22e54c13473c3f05a180  checkpoints/mosi/best.pt
+9af4000fa3cfc346308d48f3dcc8d4460d91e11fa4605f25da257b8f9321e496  checkpoints/mosei/best.pt
+fc84ec6e4ca4bd850eb59e46414f9ebd87f7f469913175c848d83ee2aff7f05d  checkpoints/simsv2/best.pt

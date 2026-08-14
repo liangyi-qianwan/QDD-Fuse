@@ -1,0 +1,49 @@
+{
+  "batch_size": 64,
+  "checkpoint": "checkpoints/mosi/best.pt",
+  "checkpoint_epoch": 6,
+  "dataset": "mosi",
+  "model_variant": "pnr_trifuse",
+  "pnr_fusion_combine": "mean_token_type",
+  "support": {
+    "no0": 656,
+    "test": 686,
+    "zero_labels": 30
+  },
+  "test": {
+    "acc2": 86.89024390243902,
+    "acc2_has0": 84.6938775510204,
+    "acc2_no0": 86.89024390243902,
+    "acc2_nz": 86.89024390243902,
+    "acc7": 47.08454810495627,
+    "corr": 0.8192655461153642,
+    "f1": 86.86265998961025,
+    "f1_has0": 84.60508911949202,
+    "f1_no0": 86.86265998961025,
+    "f1_nz": 86.86265998961025,
+    "has0_support": 686,
+    "mae": 0.6717973161086918,
+    "no0_support": 656,
+    "zero_support": 30
+  },
+  "test_losses": {
+    "common": 0.7758130973035638,
+    "dynamic_weight_common": 1.0,
+    "dynamic_weight_hsic": 1.0,
+    "dynamic_weight_info": 1.0,
+    "dynamic_weight_kl": 1.0,
+    "dynamic_weight_noise": 1.0,
+    "dynamic_weight_orth": 1.0,
+    "dynamic_weight_pair": 1.0,
+    "dynamic_weight_reconstruction": 1.0,
+    "hsic": 0.18158547580242157,
+    "info": 0.9291773004965349,
+    "kl": 2.1236801147460938,
+    "noise": 0.03667808391831138,
+    "orth": 0.0091441741890528,
+    "pair": 0.7287841764363375,
+    "reconstruction": 0.32061338424682617,
+    "task": 0.8654392497106032,
+    "total": 6.934624975377863
+  }
+}

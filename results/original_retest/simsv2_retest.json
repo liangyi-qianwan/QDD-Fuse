@@ -1,0 +1,43 @@
+{
+  "batch_size": 64,
+  "checkpoint": "/hy-tmp/CVPR2026_repro_project/outputs/PNR_TriFuse_hparam_best/simsv2/best.pt",
+  "checkpoint_epoch": 2,
+  "dataset": "simsv2",
+  "model_variant": "pnr_trifuse",
+  "pnr_fusion_combine": "mean_token_type",
+  "support": {
+    "no0": 940,
+    "test": 1034,
+    "zero_labels": 94
+  },
+  "test": {
+    "acc2": 80.27079303675049,
+    "acc2_nz": 83.61702127659575,
+    "acc3": 73.88781431334623,
+    "acc5": 57.543520309477756,
+    "corr": 0.7222309612500165,
+    "f1": 80.30927839618788,
+    "f1_nz": 83.54812689564078,
+    "mae": 0.29139600520344666
+  },
+  "test_losses": {
+    "common": 0.8968877406681285,
+    "dynamic_weight_common": 1.0,
+    "dynamic_weight_hsic": 1.0,
+    "dynamic_weight_info": 1.0,
+    "dynamic_weight_kl": 1.0,
+    "dynamic_weight_noise": 1.0,
+    "dynamic_weight_orth": 1.0,
+    "dynamic_weight_pair": 1.0,
+    "dynamic_weight_reconstruction": 1.0,
+    "hsic": 0.1263625393895542,
+    "info": 0.1906832566156107,
+    "kl": 0.39037565799320445,
+    "noise": 0.035721083664718795,
+    "orth": 0.00789715544156292,
+    "pair": 0.9082508437773761,
+    "reconstruction": 0.09977867804905947,
+    "task": 0.16160097499104106,
+    "total": 5.934327490189496
+  }
+}

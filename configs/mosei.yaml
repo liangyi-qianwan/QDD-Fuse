@@ -1,0 +1,9 @@
+dataset: mosei
+epochs: 30
+batch_size: 64
+lr: 0.0001
+hidden_dim: 128
+fusion_mode: text_guided_attention
+dropout: 0.1
+label_min: -3.0
+label_max: 3.0

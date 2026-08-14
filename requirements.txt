@@ -1,0 +1,13 @@
+numpy
+scipy
+scikit-learn
+tqdm
+pyyaml
+pandas
+huggingface_hub
+hf_xet
+gdown
+requests
+cmu-multimodal-sdk
+h5py
+validators

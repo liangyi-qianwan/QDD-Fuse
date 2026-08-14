@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venvs/
+
+data
+data/
+outputs/
+results/retest/
+*.tar
+*.tar.gz
+*.zip
+
+.env
+.DS_Store

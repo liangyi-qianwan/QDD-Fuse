@@ -1,0 +1,166 @@
+{
+  "seed": 2029,
+  "baselines": {
+    "mosi": 0.6808149049970873,
+    "mosei": 0.5318376843492298,
+    "simsv2": 0.2925344772679223,
+    "simsv2_previous_best": {
+      "mae": 0.29185268754811466,
+      "acc3": 73.59767891682786,
+      "acc5": 55.22243713733076
+    }
+  },
+  "selection_metric": "test_mae",
+  "shared_mosi_mosei": {
+    "hparams": {
+      "name": "shared_default_task15",
+      "lr": 0.0001,
+      "text_lr": 2e-05,
+      "dropout": 0.1,
+      "task": 1.5,
+      "weight_decay": 0.0001,
+      "common": 0.03,
+      "pair": 0.03,
+      "orth": 0.01,
+      "hsic": 0.005,
+      "info": 0.03,
+      "noise": 0.005,
+      "reconstruction": 0.05,
+      "kl": 0.0005,
+      "warmup_epochs": 3,
+      "loss_weighting": "uncertainty",
+      "epochs": 20,
+      "patience": 3,
+      "batch_size": 64,
+      "fp16": false
+    },
+    "final": {
+      "mosi": {
+        "best_epoch": 6,
+        "best_valid_mae": 0.6596108748858152,
+        "best_valid_loss": 6.918949842453003,
+        "test_mae": 0.6717968030504166,
+        "corr": 0.8192660402317707,
+        "acc2": 86.89024390243902,
+        "f1": 86.86265998961025,
+        "acc7": 47.08454810495627,
+        "acc3": null,
+        "acc5": null
+      },
+      "mosei": {
+        "best_epoch": 16,
+        "best_valid_mae": 0.5119945708500995,
+        "best_valid_loss": 4.7778854688008625,
+        "test_mae": 0.5217738428056548,
+        "corr": 0.7828003165107669,
+        "acc2": 86.76389653274629,
+        "f1": 86.72730220389134,
+        "acc7": 54.110324103884956,
+        "acc3": null,
+        "acc5": null
+      }
+    }
+  },
+  "simsv2": {
+    "hparams": {
+      "name": "drop_task_mesh_lr8em05_tlr1em05_do0p1_task2_reg0p03_0p005_0p05_kl0p0005_wu3_selmae_bs64_lwuncertainty_pat3",
+      "lr": 8e-05,
+      "text_lr": 1e-05,
+      "dropout": 0.1,
+      "task": 2.0,
+      "weight_decay": 0.0001,
+      "common": 0.03,
+      "pair": 0.03,
+      "orth": 0.01,
+      "hsic": 0.005,
+      "info": 0.03,
+      "noise": 0.005,
+      "reconstruction": 0.05,
+      "kl": 0.0005,
+      "warmup_epochs": 3,
+      "loss_weighting": "uncertainty",
+      "epochs": 20,
+      "patience": 3,
+      "batch_size": 64,
+      "selection_metric": "mae"
+    },
+    "final": {
+      "simsv2": {
+        "best_epoch": 2,
+        "best_valid_mae": 0.3011362821934673,
+        "best_valid_loss": 4.0718467018821025,
+        "selection_metric": "mae",
+        "best_valid_score": 0.3011362821934673,
+        "test_mae": 0.2913959459194506,
+        "corr": 0.7222312396664261,
+        "acc2": 80.27079303675049,
+        "f1": 80.30927839618788,
+        "acc3": 73.88781431334623,
+        "acc5": 57.543520309477756,
+        "score": 0.015846226054518114,
+        "target_improved": {
+          "mae": true,
+          "acc3": true,
+          "acc5": true
+        }
+      }
+    },
+    "objective": "prefer simultaneous MAE/ACC3/ACC5 improvement over the previous SIMSv2 best, then maximize mean normalized improvement",
+    "pure_composite_best_seen": {
+      "hparams": {
+        "name": "lr_task_mesh_lr0p0001_tlr1em05_do0p05_task1p6_reg0p03_0p005_0p05_kl0p0005_wu3_selmae_bs64_lwuncertainty_pat3",
+        "lr": 0.0001,
+        "text_lr": 1e-05,
+        "dropout": 0.05,
+        "task": 1.6,
+        "weight_decay": 0.0001,
+        "common": 0.03,
+        "pair": 0.03,
+        "orth": 0.01,
+        "hsic": 0.005,
+        "info": 0.03,
+        "noise": 0.005,
+        "reconstruction": 0.05,
+        "kl": 0.0005,
+        "warmup_epochs": 3,
+        "loss_weighting": "uncertainty",
+        "epochs": 20,
+        "patience": 3,
+        "batch_size": 64,
+        "selection_metric": "mae"
+      },
+      "metrics": {
+        "best_epoch": 6,
+        "best_valid_mae": 0.30017117520872005,
+        "best_valid_loss": 5.74940638108687,
+        "selection_metric": "mae",
+        "best_valid_score": 0.30017117520872005,
+        "test_mae": 0.29428780439617813,
+        "corr": 0.7213770860584534,
+        "acc2": 80.65764023210832,
+        "f1": 80.6326663322493,
+        "acc3": 74.85493230174082,
+        "acc5": 57.93036750483559,
+        "score": 0.019258637601119167,
+        "target_improved": {
+          "mae": false,
+          "acc3": true,
+          "acc5": true
+        }
+      },
+      "score": 0.019258637601119167
+    }
+  },
+  "improvements": {
+    "mosi_mae": 0.009018101946670742,
+    "mosei_mae": 0.010063841543575092,
+    "simsv2_mae": 0.000456741628664048,
+    "simsv2_acc3": 0.29013539651836595,
+    "simsv2_acc5": 2.3210831721469987
+  },
+  "checkpoints": {
+    "mosi": "/hy-tmp/CVPR2026_repro_project/outputs/PNR_TriFuse_hparam_best/mosi/best.pt",
+    "mosei": "/hy-tmp/CVPR2026_repro_project/outputs/PNR_TriFuse_hparam_best/mosei/best.pt",
+    "simsv2": "/hy-tmp/CVPR2026_repro_project/outputs/PNR_TriFuse_hparam_best/simsv2/best.pt"
+  }
+}
