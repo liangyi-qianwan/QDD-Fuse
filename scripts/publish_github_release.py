@@ -132,6 +132,9 @@ def source_files(package_dir: Path) -> tuple[list[Path], list[str]]:
         if not path.is_file():
             continue
         rel = path.relative_to(package_dir).as_posix()
+        if "__pycache__" in path.relative_to(package_dir).parts or path.suffix == ".pyc":
+            skipped.append(rel)
+            continue
         if rel in skip_exact or rel.startswith(skip_prefixes):
             skipped.append(rel)
             continue
